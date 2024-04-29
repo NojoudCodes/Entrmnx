@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    /* colors */
+    --primary: #7AA2E3;
+    --secondary: #6AD4DD;
+    --info: #97E7E1;
+    --light: #F8F6E3;
+    --dark: #0F0F0F;
+    --white: #FFF;
+    --muted: #828282;
+    /* font sizes */
+    --display-xl: 64px;
+    --display-lg: 45px;
+    --display-md: 35px;
+    --display-sm: 25px;
+    --fs-lg: 18px;
+    --fs-md: 16px;
+    --fs-sm: 14px;
+    --fs-xs: 12px;
+    /* font family */
+    --ff-primary: "PT Sans", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+    /* font weight */
+    --fw-bold: 700;
+    --fw-semi-bold: 500;
+    --fw-regular: 400;
+    --fw-light: 300;
+}
+
+
+body {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-md);
+    font-weight: var(--fw-regular);
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+section {
+    padding: 40px 0;
+    margin: 80px 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--ff-secondary);
+}
+
+h1 {
+    font-size: var(--display-xl);
+    font-weight: var(--fw-bold);
+}
+
+h2 {
+    font-size: var(--display-lg);
+    font-weight: var(--fw-semi-bold);
+}
+
+h3 {
+    font-size: var(--display-md);
+    font-weight: var(--fw-semi-bold);
+}
+
+h4 {
+    font-size: var(--display-sm);
+    font-weight: var(--fw-semi-bold);
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+p {
+    padding: 0;
+}
+
+.btn {
+    border-radius: 0;
+    padding: 5px 25px;
+    border: 1px solid var(--secondary);
+    transition: all 0.3s ease-in;
+}
+
+.btn-primary {
+    background-color: var(--secondary);
+    color: var(--dark);
+}
+
+.btn-outline-primary {
+    background-color: transparent;
+    color: var(--white);
+}
+
+.btn-primary:hover,
+.btn-outline-primary:hover {
+    background-color: var(--info);
+    border: 1px solid var(--info);
+    color: var(--dark);
+}
+
+.splide__slide img {
+    width: 256px;
+}
+
+.splide__slide .details {
+    width: 252px;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+.splide__slide .info {
+    width: 200px;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+}
+.splide__pagination__page.is-active,
+.splide__pagination li {
+    display: none;
+}
+
+.hd {
+    background-color: var(--secondary);
+    border-radius: 20px;
+    padding: 0 10px;
+    margin-right: 3px;
+    color: var(--dark);
+    text-transform: uppercase;
+}
+
+.length {
+    border: 1px solid var(--secondary);
+    border-radius: 20px;
+    padding-inline: 10px;
+}
+
+path {
+    fill: var(--secondary);
+}
+
+/* navbar */
+.navbar {
+    background-color: transparent;
+    height: 60px;
+}
+
+.navbar .navbar-brand {
+    color: var(--white);
+    font-size: var(--display-sm);
+    font-weight: var(--fw-bold);
+}
+
+.navbar .navbar-brand span {
+    color: var(--secondary);
+}
+
+.navbar .nav-item a.nav-link {
+    color: var(--white);
+    font-weight: var(--fw-semi-bold);
+    margin: 0 5px;
+}
+
+.navbar .nav-item a.nav-link:hover {
+    color: var(--secondary);
+}
+
+.navbar .navbar-toggler {
+    border: 0;
+}
+
+.navbar .navbar-toggler-icon {
+    background-image: url('../images/bars-solid.svg');
+}
+
+/* hero */
+.hero {
+    height: calc(100vh - 60px);
+}
+
+.hero span {
+    color: var(--secondary);
+}
+
+.hero .container {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    height: 100%;
+}
+
+.hero .hero-info {
+    color: var(--white);
+}
+
+/* about */
+#about h2 span {
+    color: var(--secondary);
+
+}
+
+#about p {
+    margin: 10px 0;
+    line-height: 1.9;
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-light);
+}
+
+/* plans */
+#plans .row>* {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+#plans .plan-col {
+    border: 1px solid var(--muted);
+    transition: all 0.3s ease-in;
+}
+
+#plans .plan-col:hover {
+    border: 3px solid var(--secondary);
+}
+
+#plans .plan-col:hover .plan-name {
+    background-color: var(--secondary);
+}
+
+#plans .plan-name {
+    background-color: var(--info);
+    border: 1px solid var(--info);
+    color: var(--dark);
+}
+
+#plans .plan-name .info {
+    padding: 10px 20px;
+}
+
+#plans .plan-name .info span {
+    font-size: var(--fs-lg);
+}
+
+#plans .details {
+    padding: 10px;
+}
+
+#plans .details .detail-list .detail-item {
+    padding: 5px 0;
+    font-size: var(--fs-lg);
+}
+
+/* contact */
+#contact form input,
+#contact form textarea {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--muted);
+}
+
+#contact form input:hover,
+#contact form textarea:hover {
+    border: 1px solid var(--secondary);
+}
+
+#contact .form-control:focus {
+    outline: 0;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 0;
+}
+
+#contact form input::placeholder,
+#contact form textarea::placeholder {
+    color: var(--secondary);
+}
+
+#contact h3 {
+    color: var(--secondary);
+}
+
+#contact p {
+    font-size: var(--fs-md);
+    font-weight: var(--fw-light);
+    color: var(--muted);
+    line-height: 1.9;
+}
+
+/* login */
+#form {
+    background-image: url('../images/form-bg.png');
+    background-size: cover;
+    background-position: right bottom;
+}
+
+#form .the-form {
+    width: 40%;
+    padding: 100px;
+    color: var(--dark);
+    /* Generated by https://generator.ui.glass/ */
+    backdrop-filter: blur(8px) saturate(200%);
+    -webkit-backdrop-filter: blur(8px) saturate(200%);
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+#form .the-form h3,
+#form .the-form label {
+    color: var(--white);
+}
+
+#form .the-form input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid var(--white);
+}
+
+#form .the-form .form-control:focus {
+    outline: 0;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 0
+}
+
+#form .form-check-input[type=checkbox] {
+    border: 1px solid var(--white);
+}
+
+/* footer */
+footer .container {
+    border-top: 1px solid var(--secondary);
+    padding-top: 20px;
+}
